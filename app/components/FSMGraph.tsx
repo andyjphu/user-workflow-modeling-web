@@ -50,6 +50,7 @@ const FSMGraph: React.FC<FSMGraphProps> = ({ externalNodes = [], externalEdges =
         animated: true,
         style: { strokeWidth: 1.5 },
         markerEnd: { type: MarkerType.ArrowClosed },
+        type: "smoothstep",            // ⬅️ key line
       })),
     []
   );
@@ -108,6 +109,7 @@ const FSMGraph: React.FC<FSMGraphProps> = ({ externalNodes = [], externalEdges =
         {
           ...connection,
           markerEnd: { type: MarkerType.ArrowClosed },
+          type: "smoothstep",            // ⬅️ key line
         },
         eds,
       ),

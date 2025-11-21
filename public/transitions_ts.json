@@ -1,0 +1,380 @@
+[
+  {
+    "folder": "20251119_161440-ManualSummary",
+    "trigger": "introduce_workflow",
+    "source": "introduction",
+    "dest": "video_idea_organization",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161440-ManualSummary",
+    "trigger": "mention_video_ideas",
+    "source": "video_idea_organization",
+    "dest": "discussing_seo_tips",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161440-ManualSummary",
+    "trigger": "highlight_specific_ideas",
+    "source": "discussing_seo_tips",
+    "dest": "explaining_destructuring",
+    "timestamp": 40.7
+  },
+  {
+    "folder": "20251119_161440-ManualSummary",
+    "trigger": "transition_to_destructuring",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video",
+    "timestamp": 55.9
+  },
+  {
+    "folder": "20251119_161440-ManualSummary",
+    "trigger": "provide_code_snippets",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts",
+    "timestamp": 70.1
+  },
+  {
+    "folder": "20251119_161440-ManualSummary",
+    "trigger": "summarize_key_points",
+    "source": "explaining_js_concepts",
+    "dest": "conclusion",
+    "timestamp": 85.3
+  },
+  {
+    "folder": "20251119_161440-ManualSummary",
+    "trigger": "encourage_viewer_engagement",
+    "source": "conclusion",
+    "dest": "audience_engagement",
+    "timestamp": 90.5
+  },
+  {
+    "folder": "20251119_161245-ManualSummary",
+    "trigger": "start_recording_video",
+    "source": "preparing_to_speak",
+    "dest": "recording_video",
+    "timestamp": 0.0
+  },
+  {
+    "folder": "20251119_161958-ManualSummary",
+    "trigger": "pointing_at_digital_board",
+    "source": "video_idea_list",
+    "dest": "explaining_js_concepts",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161958-ManualSummary",
+    "trigger": "reference_to_code",
+    "source": "explaining_js_concepts",
+    "dest": "coding_practices",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161958-ManualSummary",
+    "trigger": "hand_gestures",
+    "source": "coding_practices",
+    "dest": "engaging_audience",
+    "timestamp": 40.0
+  },
+  {
+    "folder": "20251119_161958-ManualSummary",
+    "trigger": "facial_expressions",
+    "source": "engaging_audience",
+    "dest": "summarizing_content",
+    "timestamp": 55.0
+  },
+  {
+    "folder": "20251119_161958-ManualSummary",
+    "trigger": "summary",
+    "source": "summarizing_content",
+    "dest": "conclusion",
+    "timestamp": 70.0
+  },
+  {
+    "folder": "20251119_161359-ManualSummary",
+    "trigger": "click_run_button",
+    "source": "introduction",
+    "dest": "video_idea_list",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161359-ManualSummary",
+    "trigger": "click_run_button",
+    "source": "video_idea_list",
+    "dest": "explaining_js_concepts",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161505-ManualSummary",
+    "trigger": "start_recording",
+    "source": "preparing_to_speak",
+    "dest": "recording_video",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161505-ManualSummary",
+    "trigger": "discuss_video_ideas",
+    "source": "recording_video",
+    "dest": "video_idea_list",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161505-ManualSummary",
+    "trigger": "highlight_video_idea",
+    "source": "video_idea_list",
+    "dest": "explaining_js_concepts",
+    "timestamp": 40.0
+  },
+  {
+    "folder": "20251119_161505-ManualSummary",
+    "trigger": "continue_explanation",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_js_concepts",
+    "timestamp": 55.0
+  },
+  {
+    "folder": "20251119_161505-ManualSummary",
+    "trigger": "summarize_concepts",
+    "source": "explaining_js_concepts",
+    "dest": "summarizing_content",
+    "timestamp": 70.0
+  },
+  {
+    "folder": "20251119_161505-ManualSummary",
+    "trigger": "engage_audience",
+    "source": "summarizing_content",
+    "dest": "audience_engagement",
+    "timestamp": 85.0
+  },
+  {
+    "folder": "20251119_161505-ManualSummary",
+    "trigger": "conclude_tutorial",
+    "source": "audience_engagement",
+    "dest": "conclusion",
+    "timestamp": 100.0
+  },
+  {
+    "folder": "20251119_161732-ManualSummary",
+    "trigger": "introduce_topic",
+    "source": "introduction",
+    "dest": "explaining_js_concepts",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161732-ManualSummary",
+    "trigger": "navigate_content_management_system",
+    "source": "explaining_js_concepts",
+    "dest": "content_organization",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161732-ManualSummary",
+    "trigger": "highlight_video_ideas",
+    "source": "content_organization",
+    "dest": "video_ideas",
+    "timestamp": 30.7
+  },
+  {
+    "folder": "20251119_161732-ManualSummary",
+    "trigger": "discuss_video_ideas",
+    "source": "video_ideas",
+    "dest": "explaining_js_concepts",
+    "timestamp": 40.9
+  },
+  {
+    "folder": "20251119_161732-ManualSummary",
+    "trigger": "summarize_key_points",
+    "source": "explaining_js_concepts",
+    "dest": "conclusion",
+    "timestamp": 60.1
+  },
+  {
+    "folder": "20251119_161522-ManualSummary",
+    "trigger": "explaining_concept",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_js_concepts",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161522-ManualSummary",
+    "trigger": "explaining_concept",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_js_concepts",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161314-ManualSummary",
+    "trigger": "start_recording_video",
+    "source": "explaining_workflow",
+    "dest": "recording_video",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161314-ManualSummary",
+    "trigger": "continue_speaking",
+    "source": "recording_video",
+    "dest": "explaining_workflow",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161314-ManualSummary",
+    "trigger": "open_workspace",
+    "source": "explaining_workflow",
+    "dest": "content_idea_organization",
+    "timestamp": 40.7
+  },
+  {
+    "folder": "20251119_161259-ManualSummary",
+    "trigger": "continuous_speech",
+    "source": "explaining_workflow",
+    "dest": "explaining_workflow",
+    "timestamp": 15.0
+  },
+  {
+    "folder": "20251119_162027-ManualSummary",
+    "trigger": "introduce_concept",
+    "source": "explaining_destructuring",
+    "dest": "explaining_js_concepts",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_162027-ManualSummary",
+    "trigger": "show_code_snippet",
+    "source": "explaining_destructuring",
+    "dest": "explaining_js_concepts",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_162027-ManualSummary",
+    "trigger": "use_hand_gestures",
+    "source": "explaining_destructuring",
+    "dest": "explaining_js_concepts",
+    "timestamp": 40.0
+  },
+  {
+    "folder": "20251119_162027-ManualSummary",
+    "trigger": "address_audience",
+    "source": "explaining_destructuring",
+    "dest": "engaging_audience",
+    "timestamp": 55.0
+  },
+  {
+    "folder": "20251119_162027-ManualSummary",
+    "trigger": "summarize_key_points",
+    "source": "explaining_js_concepts",
+    "dest": "conclusion",
+    "timestamp": 80.0
+  },
+  {
+    "folder": "20251119_161421-ManualSummary",
+    "trigger": "introduce_workflow",
+    "source": "introduction",
+    "dest": "explaining_workflow",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161421-ManualSummary",
+    "trigger": "discuss_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "video_ideas_discussion",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161421-ManualSummary",
+    "trigger": "highlight_topic",
+    "source": "video_ideas_discussion",
+    "dest": "topic_highlight",
+    "timestamp": 40.2
+  },
+  {
+    "folder": "20251119_161421-ManualSummary",
+    "trigger": "explore_js_concepts",
+    "source": "topic_highlight",
+    "dest": "explaining_js_concepts",
+    "timestamp": 55.1
+  },
+  {
+    "folder": "20251119_161421-ManualSummary",
+    "trigger": "explain_video_creation_process",
+    "source": "explaining_js_concepts",
+    "dest": "video_creation_process",
+    "timestamp": 70.9
+  },
+  {
+    "folder": "20251119_161421-ManualSummary",
+    "trigger": "engage_audience",
+    "source": "video_creation_process",
+    "dest": "audience_engagement",
+    "timestamp": 85.7
+  },
+  {
+    "folder": "20251119_161421-ManualSummary",
+    "trigger": "conclude_session",
+    "source": "audience_engagement",
+    "dest": "conclusion",
+    "timestamp": 100.5
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person begins speaking",
+    "source": "preparing_to_speak",
+    "dest": "explaining_destructuring",
+    "timestamp": 10.5
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person discusses video ideas",
+    "source": "explaining_destructuring",
+    "dest": "video_idea_list",
+    "timestamp": 25.3
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person continues explaining",
+    "source": "video_idea_list",
+    "dest": "explaining_destructuring",
+    "timestamp": 40.0
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person elaborates on SEO tips",
+    "source": "explaining_destructuring",
+    "dest": "discussing_seo_tips",
+    "timestamp": 55.0
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person shifts to coding concepts",
+    "source": "discussing_seo_tips",
+    "dest": "explaining_js_concepts",
+    "timestamp": 70.0
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person transitions to audience engagement",
+    "source": "explaining_js_concepts",
+    "dest": "audience_engagement",
+    "timestamp": 85.0
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person returns to explaining",
+    "source": "audience_engagement",
+    "dest": "explaining_js_concepts",
+    "timestamp": 100.0
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person concludes the segment",
+    "source": "explaining_js_concepts",
+    "dest": "conclusion",
+    "timestamp": 115.0
+  },
+  {
+    "folder": "20251119_161752-ManualSummary",
+    "trigger": "person prepares to speak again",
+    "source": "conclusion",
+    "dest": "explaining_destructuring",
+    "timestamp": 130.0
+  }
+]

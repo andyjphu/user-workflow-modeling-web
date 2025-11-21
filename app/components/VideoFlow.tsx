@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useRef, useEffect } from "react";
-import { type Node, type Edge } from "@xyflow/react";
+import { type Node, type Edge, MarkerType } from "@xyflow/react";
 import FSMGraph from "./FSMGraph";
 
 // Types for the user states analysis JSON
@@ -240,22 +240,53 @@ export function VideoFlow() {
         // Get set of current node states
         const nodeStates = new Set(nodes.map(node => node.data.state).filter(Boolean));
         
-        // Create edges for transitions where both source and dest exist
-        const newEdges: Edge[] = [];
-        let edgeCounter = 0;
+        // Group transitions by source-dest pair to detect duplicates
+        const edgeGroups = new Map<string, Transition[]>();
         
         transitions.forEach(transition => {
             if (nodeStates.has(transition.source) && nodeStates.has(transition.dest)) {
-                newEdges.push({
+                const key = `${transition.source}->${transition.dest}`;
+                if (!edgeGroups.has(key)) {
+                    edgeGroups.set(key, []);
+                }
+                edgeGroups.get(key)!.push(transition);
+            }
+        });
+        
+        // Create edges with offsets for multiple edges between same nodes
+        const newEdges: Edge[] = [];
+        let edgeCounter = 0;
+        
+        edgeGroups.forEach((transitionGroup, key) => {
+            const count = transitionGroup.length;
+            
+            transitionGroup.forEach((transition, index) => {
+                // Calculate offset for multiple edges between same pair
+                let offset = 0;
+                if (count > 1) {
+                    // Distribute offsets symmetrically: [-2, -1, 0, 1, 2] for 5 edges
+                    const step = 0.5;
+                    offset = (index - (count - 1) / 2) * step;
+                }
+                
+                const edge: any = {
                     id: `e-${edgeCounter++}`,
                     source: transition.source,
                     target: transition.dest,
                     label: transition.trigger,
                     animated: true,
                     style: { strokeWidth: 1.5 },
-                    type: 'default',
-                });
-            }
+                    type: 'smoothstep',
+                    markerEnd: { type: MarkerType.ArrowClosed },
+                };
+                
+                // Add pathOptions for offset (React Flow 12+)
+                if (offset !== 0) {
+                    edge.pathOptions = { offset };
+                }
+                
+                newEdges.push(edge);
+            });
         });
         
         console.log('Created edges:', newEdges.length, 'out of', transitions.length, 'total transitions');
