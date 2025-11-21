@@ -22,9 +22,10 @@ const nodeTypes = { animated: AnimatedNode };
 
 interface FSMGraphProps {
   externalNodes?: Node[];
+  externalEdges?: Edge[];
 }
 
-const FSMGraph: React.FC<FSMGraphProps> = ({ externalNodes = [] }) => {
+const FSMGraph: React.FC<FSMGraphProps> = ({ externalNodes = [], externalEdges = [] }) => {
   const initialNodes: Node[] = useMemo(
     () =>
       states.map((id, idx) => ({
@@ -62,8 +63,13 @@ const FSMGraph: React.FC<FSMGraphProps> = ({ externalNodes = [] }) => {
     return [...initialNodes, ...animatedExternalNodes];
   }, [initialNodes, externalNodes]);
 
+  // Merge external edges with internal edges
+  const mergedEdges = useMemo(() => {
+    return [...initialEdges, ...externalEdges];
+  }, [initialEdges, externalEdges]);
+
   const [nodes, setNodes, onNodesChange] = useNodesState(mergedNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(mergedEdges);
 
   // Update nodes when externalNodes change
   React.useEffect(() => {
@@ -74,6 +80,11 @@ const FSMGraph: React.FC<FSMGraphProps> = ({ externalNodes = [] }) => {
     const merged = [...initialNodes, ...animatedExternalNodes];
     setNodes(applyRepulsion(merged));
   }, [externalNodes, initialNodes, setNodes]);
+
+  // Update edges when externalEdges change
+  React.useEffect(() => {
+    setEdges([...initialEdges, ...externalEdges]);
+  }, [externalEdges, initialEdges, setEdges]);
 
   const addNode = () => {
     setNodes((curr) => {

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useRef, useEffect } from "react";
-import { type Node } from "@xyflow/react";
+import { type Node, type Edge } from "@xyflow/react";
 import FSMGraph from "./FSMGraph";
 
 // Types for the user states analysis JSON
@@ -14,16 +14,47 @@ interface TimeMarker {
     node: Node;
 }
 
+interface Transition {
+    trigger: string;
+    source: string;
+    dest: string;
+}
+
 export function VideoFlow() {
     const [nodes, setNodes] = useState<Node[]>([]);
+    const [edges, setEdges] = useState<Edge[]>([]);
     const [fired, setFired] = useState<Set<number>>(new Set());
     const [videoWidth, setVideoWidth] = useState(400);
     const [dragging, setDragging] = useState(false);
     const [markers, setMarkers] = useState<TimeMarker[]>([]);
+    const [transitions, setTransitions] = useState<Transition[]>([]);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
+
+    // Load transitions data
+    useEffect(() => {
+        fetch('/transitions.json')
+            .then(res => res.json())
+            .then((data: Transition[]) => {
+                // Deduplicate transitions by (source, dest, trigger) tuple
+                const seen = new Set<string>();
+                const uniqueTransitions: Transition[] = [];
+                
+                data.forEach(transition => {
+                    const key = `${transition.source}|${transition.dest}|${transition.trigger}`;
+                    if (!seen.has(key)) {
+                        seen.add(key);
+                        uniqueTransitions.push(transition);
+                    }
+                });
+                
+                console.log('Loaded transitions:', uniqueTransitions.length, 'unique out of', data.length, 'total');
+                setTransitions(uniqueTransitions);
+            })
+            .catch(err => console.error('Failed to load transitions:', err));
+    }, []);
 
     // Load user states analysis data
     useEffect(() => {
@@ -60,9 +91,9 @@ export function VideoFlow() {
                     return;
                 }
 
-                // Transform the data into time markers
+                // Transform the data into time markers with deduplication
                 const timeMarkers: TimeMarker[] = [];
-                let nodeIdCounter = 1;
+                const seenStates = new Map<string, number>(); // Track state -> earliest time
                 
                 sortedData.forEach((analysis, folderIdx) => {
                     const currentTimestamp = parseTimestamp(analysis.folder);
@@ -71,20 +102,34 @@ export function VideoFlow() {
                     // Calculate relative time in seconds from the first timestamp
                     const relativeTimeSeconds = (currentTimestamp.getTime() - firstTimestamp.getTime()) / 1000;
 
-                    analysis.user_states.forEach((state, stateIdx) => {
+                    // Deduplicate states within this folder's array
+                    const uniqueStates = [...new Set(analysis.user_states)];
+
+                    uniqueStates.forEach((state, stateIdx) => {
+                        // Check if we've seen this state before
+                        if (seenStates.has(state)) {
+                            // State already exists, skip it
+                            return;
+                        }
+
+                        // Mark this state as seen with its timestamp
+                        seenStates.set(state, relativeTimeSeconds);
+
                         // Generate positions in a grid layout
-                        const x = 100 + (stateIdx % 4) * 200;
-                        const y = 100 + Math.floor(stateIdx / 4) * 100 + folderIdx * 50;
+                        const totalStates = seenStates.size;
+                        const x = 100 + ((totalStates - 1) % 4) * 200;
+                        const y = 100 + Math.floor((totalStates - 1) / 4) * 100;
                         
                         timeMarkers.push({
                             time: relativeTimeSeconds,
                             node: {
-                                id: `n${nodeIdCounter++}`,
+                                id: state, // Use state name as ID for edge connections
                                 position: { x, y },
                                 data: { 
                                     label: state.replace(/_/g, ' '),
                                     folder: analysis.folder,
-                                    timestamp: currentTimestamp.toISOString()
+                                    timestamp: currentTimestamp.toISOString(),
+                                    state: state
                                 },
                                 type: "default",
                             }
@@ -188,6 +233,35 @@ export function VideoFlow() {
         }
     }, [markers]);
 
+    // Update edges when nodes change
+    useEffect(() => {
+        if (transitions.length === 0 || nodes.length === 0) return;
+
+        // Get set of current node states
+        const nodeStates = new Set(nodes.map(node => node.data.state).filter(Boolean));
+        
+        // Create edges for transitions where both source and dest exist
+        const newEdges: Edge[] = [];
+        let edgeCounter = 0;
+        
+        transitions.forEach(transition => {
+            if (nodeStates.has(transition.source) && nodeStates.has(transition.dest)) {
+                newEdges.push({
+                    id: `e-${edgeCounter++}`,
+                    source: transition.source,
+                    target: transition.dest,
+                    label: transition.trigger,
+                    animated: true,
+                    style: { strokeWidth: 1.5 },
+                    type: 'default',
+                });
+            }
+        });
+        
+        console.log('Created edges:', newEdges.length, 'out of', transitions.length, 'total transitions');
+        setEdges(newEdges);
+    }, [nodes, transitions]);
+
     // Ensure video audio is properly initialized and check audio devices
     useEffect(() => {
         const video = videoRef.current;
@@ -249,7 +323,7 @@ export function VideoFlow() {
             style={{ display: "flex", gap: 0, height: "100vh" }}
         >
             <div style={{ flex: 1 }}>
-                <FSMGraph externalNodes={nodes} />
+                <FSMGraph externalNodes={nodes} externalEdges={edges} />
             </div>
 
             <div
