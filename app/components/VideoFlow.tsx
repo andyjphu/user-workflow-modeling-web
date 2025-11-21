@@ -245,7 +245,7 @@ export function VideoFlow() {
 
                 <video
                     ref={videoRef}
-                    src="/purple.mp4"
+                    src="/tutorial.mp4"
                     controls
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}
