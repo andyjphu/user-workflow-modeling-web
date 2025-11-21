@@ -133,11 +133,12 @@ export function VideoFlow() {
         
         // Debug audio
         if (videoRef.current) {
+            const video = videoRef.current as any;
             console.log('Video audio properties:', {
                 muted: videoRef.current.muted,
                 volume: videoRef.current.volume,
-                audioTracks: videoRef.current.audioTracks?.length,
-                hasAudio: videoRef.current.mozHasAudio || videoRef.current.webkitAudioDecodedByteCount > 0
+                audioTracks: video.audioTracks?.length,
+                hasAudio: video.mozHasAudio || video.webkitAudioDecodedByteCount > 0
             });
         }
     };
@@ -187,10 +188,27 @@ export function VideoFlow() {
         }
     }, [markers]);
 
-    // Ensure video audio is properly initialized
+    // Ensure video audio is properly initialized and check audio devices
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
+
+        // Check available audio output devices
+        const checkAudioDevices = async () => {
+            try {
+                const devices = await navigator.mediaDevices.enumerateDevices();
+                const audioOutputs = devices.filter(d => d.kind === 'audiooutput');
+                console.log('Available audio output devices:', audioOutputs);
+                console.log('Current video sinkId:', (video as any).sinkId || 'default');
+                
+                if (audioOutputs.length > 1) {
+                    console.log('⚠️ Multiple audio outputs detected! Audio might be playing on a different device.');
+                    console.log('To change audio output, use browser settings or click the video.');
+                }
+            } catch (err) {
+                console.warn('Could not enumerate audio devices:', err);
+            }
+        };
 
         // Wait a bit for video to load
         const timeout = setTimeout(() => {
@@ -211,6 +229,8 @@ export function VideoFlow() {
                 console.warn('Video volume was 0, setting to 1...');
                 video.volume = 1.0;
             }
+
+            checkAudioDevices();
         }, 1000);
 
         return () => clearTimeout(timeout);
@@ -220,20 +240,6 @@ export function VideoFlow() {
         e.preventDefault();
         e.stopPropagation();
         setDragging(true);
-    };
-
-    const handleVideoClick = () => {
-        // Ensure audio is enabled when user interacts with video
-        if (videoRef.current) {
-            videoRef.current.muted = false;
-            if (videoRef.current.volume < 0.1) {
-                videoRef.current.volume = 1.0;
-            }
-            console.log('Video clicked, audio state:', {
-                muted: videoRef.current.muted,
-                volume: videoRef.current.volume
-            });
-        }
     };
 
 
@@ -338,6 +344,23 @@ export function VideoFlow() {
                     controlsList="nodownload"
                     playsInline
                     preload="metadata"
+                    onPlay={() => {
+                        if (videoRef.current) {
+                            console.log('Video playing, audio state:', {
+                                muted: videoRef.current.muted,
+                                volume: videoRef.current.volume,
+                                sinkId: (videoRef.current as any).sinkId
+                            });
+                        }
+                    }}
+                    onVolumeChange={() => {
+                        if (videoRef.current) {
+                            console.log('✅ Volume changed:', {
+                                muted: videoRef.current.muted,
+                                volume: videoRef.current.volume
+                            });
+                        }
+                    }}
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}
                     onCanPlay={handleCanPlay}

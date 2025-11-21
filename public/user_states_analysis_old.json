@@ -1,4 +1,5 @@
 [
+
   {
     "folder": "20251119_161245-ManualSummary",
     "user_states": [
@@ -14,15 +15,15 @@
       "organizing_content_plan",
       "discussing_seo_tips",
       "coding_practices",
-      "audience_engagement"
+      "engaging_audience"
     ]
   },
   {
     "folder": "20251119_161359-ManualSummary",
     "user_states": [
       "introduction",
-      "video_idea_list",
-      "video_idea_list"
+      "video_ideas_list",
+      "video_idea_details"
     ]
   },
   {
@@ -40,14 +41,14 @@
       "introduction",
       "content_organization",
       "video_ideas",
-      "explaining_js_concepts",
+      "javascript_concepts",
       "conclusion"
     ]
   },
   {
     "folder": "20251119_161522-ManualSummary",
     "user_states": [
-      "coding_tutorial",
+      "tutorial_speaker",
       "video_idea_list"
     ]
   },
@@ -70,8 +71,8 @@
     "user_states": [
       "introducing_concepts",
       "explaining_destructuring",
-      "coding_practices",
-      "audience_engagement",
+      "code_example",
+      "engaging_audience",
       "summarizing_content"
     ]
   },
@@ -81,7 +82,7 @@
       "introduction",
       "video_ideas_discussion",
       "topic_highlight",
-      "explaining_js_concepts",
+      "javascript_concepts",
       "video_creation_process",
       "audience_engagement",
       "conclusion"
@@ -90,7 +91,7 @@
   {
     "folder": "20251119_161752-ManualSummary",
     "user_states": [
-      "coding_tutorial",
+      "tutorial_speaker",
       "content_planner"
     ]
   }
