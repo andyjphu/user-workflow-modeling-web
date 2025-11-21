@@ -1,7 +1,7 @@
 import type { Node } from '@xyflow/react';
 
-const MIN_DIST = 150;
-const MAX_ITERS = 10;
+const MIN_DIST = 250;
+const MAX_ITERS = 64;
 
 export function applyRepulsion(nodes: Node[]): Node[] {
   let out = nodes.map((n) => ({
