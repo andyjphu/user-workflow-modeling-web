@@ -57,9 +57,11 @@ Custom node component with:
 - Styled with `.animated-node` class
 
 ### `app/components/VideoFlow.tsx`
-Video-synced graph component:
-- Displays nodes at specific video timestamps
-- Demonstrates time-based graph updates
+Main layout component with draggable divider:
+- Left pane: FSMGraph with full interactivity
+- Right pane: Video player with timeline markers
+- Draggable divider to resize panes
+- Video markers trigger node additions at specific timestamps
 
 ### `app/globals.css`
 Contains `.react-flow__node` with `transition: transform 0.15s ease-out` for smooth slide animations.

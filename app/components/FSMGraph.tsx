@@ -20,7 +20,11 @@ import { applyRepulsion } from "@/app/lib/repulsion";
 
 const nodeTypes = { animated: AnimatedNode };
 
-const FSMGraph: React.FC = () => {
+interface FSMGraphProps {
+  externalNodes?: Node[];
+}
+
+const FSMGraph: React.FC<FSMGraphProps> = ({ externalNodes = [] }) => {
   const initialNodes: Node[] = useMemo(
     () =>
       states.map((id, idx) => ({
@@ -49,8 +53,27 @@ const FSMGraph: React.FC = () => {
     []
   );
 
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  // Merge external nodes with internal nodes, converting external nodes to 'animated' type
+  const mergedNodes = useMemo(() => {
+    const animatedExternalNodes = externalNodes.map(node => ({
+      ...node,
+      type: 'animated',
+    }));
+    return [...initialNodes, ...animatedExternalNodes];
+  }, [initialNodes, externalNodes]);
+
+  const [nodes, setNodes, onNodesChange] = useNodesState(mergedNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+
+  // Update nodes when externalNodes change
+  React.useEffect(() => {
+    const animatedExternalNodes = externalNodes.map(node => ({
+      ...node,
+      type: 'animated',
+    }));
+    const merged = [...initialNodes, ...animatedExternalNodes];
+    setNodes(applyRepulsion(merged));
+  }, [externalNodes, initialNodes, setNodes]);
 
   const addNode = () => {
     setNodes((curr) => {
