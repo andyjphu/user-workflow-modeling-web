@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.react-flow__node {
+  transition: transform 0.15s ease-out;
+}
+
+.animated-node {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d4d4d8;
+  background: #ffffff;
+  color: #111827;
+}
