@@ -20,36 +20,43 @@ interface Transition {
     dest: string;
 }
 
+interface TimestampedTransition extends Transition {
+    folder: string;
+    timestamp: number;
+}
+
 export function VideoFlow() {
     const [nodes, setNodes] = useState<Node[]>([]);
     const [edges, setEdges] = useState<Edge[]>([]);
     const [fired, setFired] = useState<Set<number>>(new Set());
+    const [firedEdges, setFiredEdges] = useState<Set<number>>(new Set());
     const [videoWidth, setVideoWidth] = useState(400);
     const [dragging, setDragging] = useState(false);
     const [markers, setMarkers] = useState<TimeMarker[]>([]);
-    const [transitions, setTransitions] = useState<Transition[]>([]);
+    const [transitions, setTransitions] = useState<TimestampedTransition[]>([]);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
 
-    // Load transitions data
+    // Load timestamped transitions data
     useEffect(() => {
-        fetch('/transitions.json')
+        fetch('/transitions_ts.json')
             .then(res => res.json())
-            .then((data: Transition[]) => {
-                // Deduplicate transitions by (source, dest, trigger) tuple
-                const seen = new Set<string>();
-                const uniqueTransitions: Transition[] = [];
+            .then((data: TimestampedTransition[]) => {
+                // Deduplicate transitions by (source, dest, trigger) tuple, keeping earliest timestamp
+                const seen = new Map<string, TimestampedTransition>();
                 
                 data.forEach(transition => {
                     const key = `${transition.source}|${transition.dest}|${transition.trigger}`;
-                    if (!seen.has(key)) {
-                        seen.add(key);
-                        uniqueTransitions.push(transition);
+                    const existing = seen.get(key);
+                    // Keep the one with earliest timestamp
+                    if (!existing || transition.timestamp < existing.timestamp) {
+                        seen.set(key, transition);
                     }
                 });
                 
+                const uniqueTransitions = Array.from(seen.values());
                 console.log('Loaded transitions:', uniqueTransitions.length, 'unique out of', data.length, 'total');
                 setTransitions(uniqueTransitions);
             })
@@ -151,6 +158,7 @@ export function VideoFlow() {
             setDuration(videoRef.current.duration);
         }
 
+        // Add nodes when their time is reached
         markers.forEach((m, idx) => {
             if (t >= m.time && !fired.has(idx)) {
                 setNodes((nds) => [...nds, m.node]);
@@ -161,6 +169,26 @@ export function VideoFlow() {
                 });
             }
         });
+
+        // Add edges when timestamp is reached AND both nodes exist
+        if (transitions.length > 0 && nodes.length > 0) {
+            const nodeStates = new Set(nodes.map(node => node.data.state).filter(Boolean));
+            
+            transitions.forEach((transition, idx) => {
+                if (
+                    t >= transition.timestamp && 
+                    !firedEdges.has(idx) &&
+                    nodeStates.has(transition.source) && 
+                    nodeStates.has(transition.dest)
+                ) {
+                    setFiredEdges((prev) => {
+                        const next = new Set(prev);
+                        next.add(idx);
+                        return next;
+                    });
+                }
+            });
+        }
     };
 
     const handleLoadedMetadata = () => {
@@ -233,24 +261,24 @@ export function VideoFlow() {
         }
     }, [markers]);
 
-    // Update edges when nodes change
+    // Update edges based on firedEdges (transitions that have been triggered by time)
     useEffect(() => {
-        if (transitions.length === 0 || nodes.length === 0) return;
+        if (transitions.length === 0) return;
 
-        // Get set of current node states
-        const nodeStates = new Set(nodes.map(node => node.data.state).filter(Boolean));
+        // Get only the transitions that have been fired
+        const firedTransitions = transitions.filter((_, idx) => firedEdges.has(idx));
+        
+        if (firedTransitions.length === 0) return;
         
         // Group transitions by source-dest pair to detect duplicates
-        const edgeGroups = new Map<string, Transition[]>();
+        const edgeGroups = new Map<string, TimestampedTransition[]>();
         
-        transitions.forEach(transition => {
-            if (nodeStates.has(transition.source) && nodeStates.has(transition.dest)) {
-                const key = `${transition.source}->${transition.dest}`;
-                if (!edgeGroups.has(key)) {
-                    edgeGroups.set(key, []);
-                }
-                edgeGroups.get(key)!.push(transition);
+        firedTransitions.forEach(transition => {
+            const key = `${transition.source}->${transition.dest}`;
+            if (!edgeGroups.has(key)) {
+                edgeGroups.set(key, []);
             }
+            edgeGroups.get(key)!.push(transition);
         });
         
         // Create edges with offsets for multiple edges between same nodes
@@ -259,14 +287,14 @@ export function VideoFlow() {
         
         edgeGroups.forEach((transitionGroup, key) => {
             const count = transitionGroup.length;
+            const STEP = 40; // px - much larger offset for visibility
             
             transitionGroup.forEach((transition, index) => {
                 // Calculate offset for multiple edges between same pair
                 let offset = 0;
                 if (count > 1) {
-                    // Distribute offsets symmetrically: [-2, -1, 0, 1, 2] for 5 edges
-                    const step = 0.5;
-                    offset = (index - (count - 1) / 2) * step;
+                    // Distribute offsets symmetrically: [-40, 0, 40] for 3 edges
+                    offset = (index - (count - 1) / 2) * STEP;
                 }
                 
                 const edge: any = {
@@ -275,23 +303,22 @@ export function VideoFlow() {
                     target: transition.dest,
                     label: transition.trigger,
                     animated: true,
-                    style: { strokeWidth: 1.5 },
                     type: 'smoothstep',
+                    style: { strokeWidth: 1.5 },
                     markerEnd: { type: MarkerType.ArrowClosed },
+                    pathOptions: { offset }, // always set, even if 0
+                    labelBgPadding: [4, 2],
+                    labelBgBorderRadius: 4,
+                    labelBgStyle: { fill: '#fff' }, // make labels more readable
                 };
-                
-                // Add pathOptions for offset (React Flow 12+)
-                if (offset !== 0) {
-                    edge.pathOptions = { offset };
-                }
                 
                 newEdges.push(edge);
             });
         });
         
-        console.log('Created edges:', newEdges.length, 'out of', transitions.length, 'total transitions');
+        console.log('Active edges:', newEdges.length, 'out of', transitions.length, 'total transitions');
         setEdges(newEdges);
-    }, [nodes, transitions]);
+    }, [firedEdges, transitions]);
 
     // Ensure video audio is properly initialized and check audio devices
     useEffect(() => {
