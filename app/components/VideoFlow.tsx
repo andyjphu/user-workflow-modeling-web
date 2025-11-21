@@ -101,6 +101,11 @@ export function VideoFlow() {
         const t = videoRef.current?.currentTime ?? 0;
         setCurrentTime(t);
 
+        // Also update duration if it's not set yet (fallback)
+        if (duration === 0 && videoRef.current?.duration) {
+            setDuration(videoRef.current.duration);
+        }
+
         markers.forEach((m, idx) => {
             if (t >= m.time && !fired.has(idx)) {
                 setNodes((nds) => [...nds, m.node]);
@@ -240,7 +245,7 @@ export function VideoFlow() {
 
                 <video
                     ref={videoRef}
-                    src="purple.mp4"
+                    src="/purple.mp4"
                     controls
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}

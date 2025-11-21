@@ -1,0 +1,2077 @@
+[
+  {
+    "trigger": "introduce_workflow",
+    "source": "introduction",
+    "dest": "video_idea_organization"
+  },
+  {
+    "trigger": "highlight_video_ideas",
+    "source": "video_idea_organization",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "summarize_content",
+    "source": "explaining_destructuring",
+    "dest": "summarizing_content"
+  },
+  {
+    "trigger": "engage_audience",
+    "source": "summarizing_content",
+    "dest": "audience_engagement"
+  },
+  {
+    "trigger": "wrap_up",
+    "source": "audience_engagement",
+    "dest": "conclusion"
+  },
+  {
+    "trigger": "start_recording_video",
+    "source": "planning_videos",
+    "dest": "recording_video"
+  },
+  {
+    "trigger": "pointing_at_digital_board",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "reference_to_code",
+    "source": "explaining_destructuring",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "hand_gestures",
+    "source": "coding_practices",
+    "dest": "engaging_audience"
+  },
+  {
+    "trigger": "facial_expressions",
+    "source": "engaging_audience",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "summary",
+    "source": "explaining_js_concepts",
+    "dest": "conclusion"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "content_planner",
+    "dest": "video_idea_list"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "video_idea_list",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "explaining_destructuring",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "explaining_js_concepts",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "coding_practices",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "coding_tutorial",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "explaining_coding_video",
+    "dest": "video_creation_process"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "video_creation_process",
+    "dest": "recording_video"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "recording_video",
+    "dest": "detailing_concepts"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "detailing_concepts",
+    "dest": "topic_highlight"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "topic_highlight",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "explaining_workflow",
+    "dest": "organizing_content_plan"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "organizing_content_plan",
+    "dest": "content_organization"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "content_organization",
+    "dest": "video_idea_list"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "video_idea_list",
+    "dest": "discussing_seo_tips"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "discussing_seo_tips",
+    "dest": "summarizing_content"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "summarizing_content",
+    "dest": "audience_engagement"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "audience_engagement",
+    "dest": "introduction"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "introduction",
+    "dest": "video_ideas"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "video_ideas",
+    "dest": "planning_videos"
+  },
+  {
+    "trigger": "click_run_button",
+    "source": "planning_videos",
+    "dest": "content_planner"
+  },
+  {
+    "trigger": "starting_speech",
+    "source": "preparing_to_speak",
+    "dest": "introduction"
+  },
+  {
+    "trigger": "maintaining_eye_contact",
+    "source": "introduction",
+    "dest": "introduction"
+  },
+  {
+    "trigger": "discussing_video_ideas",
+    "source": "introduction",
+    "dest": "video_ideas_list"
+  },
+  {
+    "trigger": "highlighting_video_ideas",
+    "source": "video_ideas_list",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continuing_explanation",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "returning_to_introduction",
+    "source": "explaining_js_concepts",
+    "dest": "introduction"
+  },
+  {
+    "trigger": "maintaining_engagement",
+    "source": "introduction",
+    "dest": "engaging_audience"
+  },
+  {
+    "trigger": "concluding_speech",
+    "source": "engaging_audience",
+    "dest": "conclusion"
+  },
+  {
+    "trigger": "introduce_topic",
+    "source": "introduction",
+    "dest": "content_organization"
+  },
+  {
+    "trigger": "navigate_interface",
+    "source": "content_organization",
+    "dest": "video_ideas"
+  },
+  {
+    "trigger": "discuss_video_ideas",
+    "source": "video_ideas",
+    "dest": "javascript_concepts"
+  },
+  {
+    "trigger": "explain_syntax",
+    "source": "javascript_concepts",
+    "dest": "conclusion"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "video_idea_list",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_destructuring",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "explaining_video_ideas",
+    "source": "explaining_coding_video",
+    "dest": ""
+  },
+  {
+    "trigger": "start_recording_video",
+    "source": "explaining_workflow",
+    "dest": "recording_video"
+  },
+  {
+    "trigger": "continue_speaking",
+    "source": "recording_video",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "open_workspace",
+    "source": "explaining_workflow",
+    "dest": "video_ideas"
+  },
+  {
+    "trigger": "speech",
+    "source": "explaining_workflow",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "introduce_concept",
+    "source": "introduction",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "show_code_snippet",
+    "source": "explaining_destructuring",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "use_hand_gestures",
+    "source": "explaining_destructuring",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "engage_audience",
+    "source": "explaining_destructuring",
+    "dest": "audience_engagement"
+  },
+  {
+    "trigger": "summarize_concepts",
+    "source": "audience_engagement",
+    "dest": "conclusion"
+  },
+  {
+    "trigger": "introduce_workflow",
+    "source": "introduction",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "discuss_video_ideas",
+    "source": "explaining_workflow",
+    "dest": "video_ideas"
+  },
+  {
+    "trigger": "highlight_topic",
+    "source": "video_ideas",
+    "dest": "topic_highlight"
+  },
+  {
+    "trigger": "shift_focus_to_js",
+    "source": "topic_highlight",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "explain_video_creation_process",
+    "source": "explaining_js_concepts",
+    "dest": "video_creation_process"
+  },
+  {
+    "trigger": "engage_audience",
+    "source": "video_creation_process",
+    "dest": "audience_engagement"
+  },
+  {
+    "trigger": "conclude_session",
+    "source": "audience_engagement",
+    "dest": "conclusion"
+  },
+  {
+    "trigger": "start_speech",
+    "source": "preparing_to_speak",
+    "dest": "introduction"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "introduction",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": "explaining_workflow"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_workflow",
+    "dest": "coding_concepts_explanation"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_concepts_explanation",
+    "dest": "coding_practices"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_practices",
+    "dest": "explaining_coding_video"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_coding_video",
+    "dest": "coding_tutorial"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "coding_tutorial",
+    "dest": "explaining_js_concepts"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_js_concepts",
+    "dest": "explaining_destructuring"
+  },
+  {
+    "trigger": "continue_speech",
+    "source": "explaining_destructuring",
+    "dest": ""
+  }
+]
