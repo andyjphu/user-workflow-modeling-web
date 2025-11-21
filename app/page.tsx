@@ -1,11 +1,12 @@
-
-// app/page.tsx or wherever
-import FSMGraph from "./FSMGraph";
+import FSMGraph from "@/app/components/FSMGraph";
+import { VideoFlow } from "@/app/components/VideoFlow";
 
 export default function Page() {
   return (
     <main className="w-full h-screen">
-      <FSMGraph />
+      <div className="w-full h-screen">
+        <VideoFlow />
+      </div>
     </main>
   );
 }

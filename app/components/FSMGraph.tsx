@@ -14,9 +14,9 @@ import {
   Connection,
   ReactFlowProps,
 } from "@xyflow/react";
-import { AnimatedNode } from "./AnimatedNode";
-import { states, transitions } from "./fsm";
-import { applyRepulsion } from "./repulsion";
+import { AnimatedNode } from "@/app/components/AnimatedNode";
+import { states, transitions } from "@/app/lib/fsm";
+import { applyRepulsion } from "@/app/lib/repulsion";
 
 const nodeTypes = { animated: AnimatedNode };
 
@@ -115,3 +115,4 @@ const FSMGraph: React.FC = () => {
 };
 
 export default FSMGraph;
+

@@ -32,3 +32,4 @@ export const transitions: FSMTransition[] = [
   { trigger: "open_terminal", source: "coding_in_editor", dest: "terminal_activity" },
   { trigger: "switch_back", source: "terminal_activity", dest: "coding_in_editor" },
 ];
+

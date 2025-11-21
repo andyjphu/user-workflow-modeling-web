@@ -17,43 +17,52 @@ This project renders user workflow states and transitions as an interactive grap
 
 ```
 /app
-  page.tsx           # Main page that renders FSMGraph
-  layout.tsx         # Root layout (imports React Flow CSS)
-  FSMGraph.tsx       # Core graph component
-  AnimatedNode.tsx   # Custom node component with CSS transitions
-  fsm.ts             # FSM data (states + transitions)
-  globals.css        # Global styles including animated-node class
+  page.tsx                      # Main page that renders FSMGraph and VideoFlow
+  layout.tsx                    # Root layout (imports React Flow CSS)
+  globals.css                   # Global styles including React Flow animations
+  /components
+    FSMGraph.tsx                # Core FSM graph component
+    VideoFlow.tsx               # Video-synced graph component
+    AnimatedNode.tsx            # Custom node component
+  /lib
+    fsm.ts                      # FSM data (states + transitions)
+    repulsion.ts                # Node repulsion utility
 ```
 
 ## Key Files
 
-### `fsm.ts`
+### `app/lib/fsm.ts`
 Defines the FSM data structure:
 - `states`: Array of state IDs
 - `transitions`: Array of `{ trigger, source, dest }` objects
 - Types: `FSMStateId`, `FSMTransition`
 
-### `repulsion.ts`
+### `app/lib/repulsion.ts`
 Simple "fake physics" utility:
-- `applyRepulsion(nodes)`: Pushes nodes apart if closer than 150px
-- Runs up to 10 iterations until stable
+- `applyRepulsion(nodes)`: Pushes nodes apart if closer than 250px
+- Runs up to 64 iterations until stable
 - Called after node add and drag stop
 
-### `FSMGraph.tsx`
+### `app/components/FSMGraph.tsx`
 Main graph component:
 - Maps states → React Flow nodes (with `animated` type)
 - Maps transitions → React Flow edges (with arrow markers)
 - Provides "Add node" button for dynamic node creation
 - Supports edge creation via UI (`onConnect`)
-- Uses simple grid layout (no physics)
+- Uses simple grid layout with repulsion physics
 
-### `AnimatedNode.tsx`
+### `app/components/AnimatedNode.tsx`
 Custom node component with:
 - Top/bottom handles for connections
-- CSS transition for smooth position changes
+- Styled with `.animated-node` class
 
-### `globals.css`
-Contains `.animated-node` class with `transition: transform 0.25s ease-out` for slide animation.
+### `app/components/VideoFlow.tsx`
+Video-synced graph component:
+- Displays nodes at specific video timestamps
+- Demonstrates time-based graph updates
+
+### `app/globals.css`
+Contains `.react-flow__node` with `transition: transform 0.15s ease-out` for smooth slide animations.
 
 ## Running
 
@@ -77,19 +86,22 @@ Navigate to `http://localhost:3000` to see the FSM graph.
 ## Extending
 
 ### Add more states/transitions
-Edit `app/fsm.ts` to add entries to `states` or `transitions` arrays.
+Edit `app/lib/fsm.ts` to add entries to `states` or `transitions` arrays.
 
 ### Custom node appearance
-Modify `app/AnimatedNode.tsx` or `.animated-node` class in `globals.css`.
+Modify `app/components/AnimatedNode.tsx` or `.animated-node` class in `globals.css`.
 
 ### Node click handlers
-Add `onNodeClick` prop to `<ReactFlow />` in `FSMGraph.tsx`.
+Add `onNodeClick` prop to `<ReactFlow />` in `app/components/FSMGraph.tsx`.
 
 ### Persist layout
 Serialize `nodes` array positions and restore on load.
 
 ### Better layout
 Replace grid positioning with a layout algorithm (e.g., dagre, ELK) in `initialNodes` calculation.
+
+### Adjust repulsion parameters
+Modify `MIN_DIST` and `MAX_ITERS` constants in `app/lib/repulsion.ts`.
 
 ## Notes
 
