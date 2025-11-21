@@ -120,7 +120,26 @@ export function VideoFlow() {
 
     const handleLoadedMetadata = () => {
         const dur = videoRef.current?.duration ?? 0;
+        console.log('Video duration loaded:', dur);
         setDuration(dur);
+    };
+
+    const handleCanPlay = () => {
+        // Backup: ensure duration is set when video can play
+        if (duration === 0 && videoRef.current?.duration) {
+            console.log('Setting duration from canplay:', videoRef.current.duration);
+            setDuration(videoRef.current.duration);
+        }
+        
+        // Debug audio
+        if (videoRef.current) {
+            console.log('Video audio properties:', {
+                muted: videoRef.current.muted,
+                volume: videoRef.current.volume,
+                audioTracks: videoRef.current.audioTracks?.length,
+                hasAudio: videoRef.current.mozHasAudio || videoRef.current.webkitAudioDecodedByteCount > 0
+            });
+        }
     };
 
     const handleTimelineClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -154,10 +173,67 @@ export function VideoFlow() {
         };
     }, [dragging]);
 
+    // Debug: log duration changes
+    useEffect(() => {
+        console.log('Duration state updated:', duration);
+    }, [duration]);
+
+    // Debug: log markers
+    useEffect(() => {
+        console.log('Markers loaded:', markers.length, 'markers');
+        if (markers.length > 0) {
+            console.log('First marker time:', markers[0].time);
+            console.log('Last marker time:', markers[markers.length - 1].time);
+        }
+    }, [markers]);
+
+    // Ensure video audio is properly initialized
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        // Wait a bit for video to load
+        const timeout = setTimeout(() => {
+            console.log('Checking video audio state:', {
+                muted: video.muted,
+                volume: video.volume,
+                paused: video.paused
+            });
+            
+            // Ensure video is not muted
+            if (video.muted) {
+                console.warn('Video was muted, attempting to unmute...');
+                video.muted = false;
+            }
+            
+            // Ensure volume is up
+            if (video.volume === 0) {
+                console.warn('Video volume was 0, setting to 1...');
+                video.volume = 1.0;
+            }
+        }, 1000);
+
+        return () => clearTimeout(timeout);
+    }, []);
+
     const onMouseDown = (e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
         setDragging(true);
+    };
+
+    const handleVideoClick = () => {
+        // Ensure audio is enabled when user interacts with video
+        if (videoRef.current) {
+            videoRef.current.muted = false;
+            if (videoRef.current.volume < 0.1) {
+                videoRef.current.volume = 1.0;
+            }
+            console.log('Video clicked, audio state:', {
+                muted: videoRef.current.muted,
+                volume: videoRef.current.volume
+            });
+        }
     };
 
 
@@ -175,7 +251,19 @@ export function VideoFlow() {
                 style={{ width: 4, cursor: "col-resize", background: "#ccc" }}
             />
             
-            <div style={{ width: videoWidth, display: 'flex', flexDirection: 'column' }}>
+            <div style={{ width: videoWidth, display: 'flex', flexDirection: 'column', position: 'relative' }}>
+                {/* Dragging overlay to prevent video interaction during resize */}
+                {dragging && (
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        zIndex: 1000,
+                        cursor: 'col-resize'
+                    }} />
+                )}
                 {/* Timeline bar */}
                 <div style={{ padding: '10px', background: '#1a1a1a' }}>
                     <div
@@ -247,12 +335,18 @@ export function VideoFlow() {
                     ref={videoRef}
                     src="/tutorial.mp4"
                     controls
+                    controlsList="nodownload"
+                    playsInline
+                    preload="metadata"
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}
+                    onCanPlay={handleCanPlay}
+                    onDurationChange={handleLoadedMetadata}
                     style={{
                         width: '100%',
                         flex: 1,
-                        pointerEvents: dragging ? 'none' : 'auto'
+                        display: 'block',
+                        backgroundColor: '#000'
                     }}
                 />
             </div>
